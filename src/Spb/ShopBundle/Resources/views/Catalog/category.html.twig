@@ -1,0 +1,45 @@
+{% extends 'SpbShopBundle::layout.html.twig' %}
+
+{% block title %} 
+    Каталог Виктис
+    {% for parent in parents %}
+    - {{ parent.title|e }}
+    {% endfor %}       
+{% endblock %}
+{% block keywords %} {{ entity.keywords }} {% endblock %}
+{% block description %} {{ entity.description }} {% endblock %}
+
+{% block body %}
+
+<ul class="breadcrumb">
+    <li><a href="{{ path('spb_home') }}">Каталог</a></li>
+{% for parent in parents %}
+    <li {% if loop.last %} class="active" {% endif %}>
+        <span class="divider">/</span>
+    {% if loop.last %} 
+        {{ parent.title|e }}
+    {% else %}
+        <a href="{{ path('spb_shop_catalog_category', {'slug': parent.slug, 'tag': parent.tag}) }}">{{ parent.title|e }}</a>
+    {% endif %}
+    </li>
+{% endfor %}    
+</ul>
+
+<ul class="thumbnails row-fluid">
+{% for item in items %}
+    {% if loop.index0 in range(3, 33, 3)%}
+</ul>
+<ul class="thumbnails row-fluid">
+    {% endif %}
+    <li class="span4">
+        <a href="{{ path('spb_shop_catalog_category', {'slug': item.slug, 'tag': item.tag}) }}" class="thumbnail" alt="{{ item.title }}">
+            <img src="{{ ('/bundles/spbshop/img/catalog/'~ item.tag ~'.jpg') | apply_filter('thumb400x260')}}" alt="{{ item.tag }}">
+            {{ item.title }}
+        </a>
+    </li>    
+{% endfor %}
+</ul>
+
+{{ include('SpbShopBundle:Pages:'~ entity.slug ~'.html.twig') }}    
+    
+{% endblock %}

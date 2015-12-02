@@ -1,0 +1,98 @@
+{% extends 'SpbShopBundle::layout.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('bundles/spbshop/css/bootstrap-image-gallery.min.css') }}">
+{% endblock %}
+
+{% block javascripts %}    
+    <script src="http://blueimp.github.com/JavaScript-Load-Image/load-image.min.js"></script>
+    <script src="{{ asset('bundles/spbshop/js/bootstrap-image-gallery.js') }}"></script>
+{% endblock %}
+
+{% block title %} 
+Каталог Виктис
+    {% for parent in parents %}
+- {{ parent.title|e }}
+    {% endfor %}       
+{% endblock %}
+{% block keywords %} {{ entity.keywords }} {% endblock %}
+{% block description %} {{ entity.description }} {% endblock %}
+
+{% block body %}
+
+<ul class="breadcrumb">
+    <li><a href="{{ path('spb_home') }}">Каталог</a></li>
+{% for parent in parents %}
+    <li {% if loop.last %} class="active" {% endif %}>
+        <span class="divider">/</span>
+    {% if loop.last %} 
+        {{ parent.title|e }}
+    {% else %}
+        <a href="{{ path('spb_shop_catalog_category', {'slug': parent.slug, 'tag': parent.tag}) }}">{{ parent.title|e }}</a>
+    {% endif %}
+    </li>
+{% endfor %}    
+</ul>
+
+{% set counter = finder.count %}
+
+{% if counter > 0 %}
+<ul class="thumbnails">
+    <li class="span8">
+        <div id="myCarousel" class="carousel slide thumbnail">
+            <ol class="carousel-indicators">
+                {% for i in 0..(counter-1) %}
+                <li data-target="#myCarousel" data-slide-to="{{i}}" {%if loop.first%}class="active"{%endif%}></li>
+                {% endfor %}
+            </ol>
+
+            <div class="carousel-inner" id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery">
+                {% for image in finder %}
+                <div class="item {%if loop.first%}active{%endif%}">
+                    <a href="{{ asset('bundles/spbshop/img/catalog/'~entity.tag~'/'~image.relativepathname)}}" title="{{ entity.title }}" data-gallery="gallery">
+                    <img src="{{ asset('bundles/spbshop/img/catalog/'~entity.tag~'/'~image.relativepathname) | apply_filter('thumb800x550') }}" alt="">
+                    </a>
+                </div>            
+                {% endfor %}
+            </div>
+            {% if counter > 1 %}
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+            {% endif %}
+        </div>          
+
+      <!-- modal-gallery is the modal dialog used for the image gallery -->
+        <div id="modal-gallery" class="modal modal-gallery hide fade" tabindex="-1">
+            <div class="modal-header">
+                <a class="close" data-dismiss="modal">&times;</a>
+                <h3 class="modal-title"></h3>
+            </div>
+            <div class="modal-body"><div class="modal-image"></div></div>
+            <div class="modal-footer">
+                <a class="btn btn-primary modal-next">Вперед <i class="icon-arrow-right icon-white"></i></a>
+                <a class="btn btn-info modal-prev"><i class="icon-arrow-left icon-white"></i> Назад</a>
+                <a class="btn btn-success modal-play modal-slideshow" data-slideshow="5000"><i class="icon-play icon-white"></i> Слайд-шоу</a>
+                <a class="btn btn-inverse modal-download" target="_blank"><i class="icon-download icon-white"></i> Загрузить</a>
+                &nbsp;&nbsp;
+                <a class="btn" data-dismiss="modal" aria-hidden="true">Закрыть</a>
+            </div>
+        </div>      
+    </li>
+{% if counter > 1 %}    
+    {% set i = 0 %}
+    {% for image in finder if i < 8 %}
+    <li class="span2">
+        <a href="#" class="thumbnail" onclick="$('#myCarousel').carousel({{i}})">
+            <img src="{{ asset('bundles/spbshop/img/catalog/'~entity.tag~'/'~image.relativepathname) | apply_filter('thumb200x130') }}" >
+        </a>
+    </li>
+        {% set i = i + 1 %}
+    {% endfor %}    
+{% endif %}    
+</ul>        
+{% endif %}    
+
+
+{{ include('SpbShopBundle:Pages:'~ entity.slug ~'.html.twig') }}    
+
+{% endblock %}    

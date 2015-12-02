@@ -1,0 +1,4 @@
+SpbShopBundle:
+    resource: "@SpbShopBundle/Resources/config/routing.yml"
+    prefix:   /
+

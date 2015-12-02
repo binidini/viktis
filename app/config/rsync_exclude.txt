@@ -1,0 +1,9 @@
+*.txt
+.git
+deps
+README.md
+app/cache/*
+app/logs/*
+web/.htaccess
+web/media/*
+web/uploads/*

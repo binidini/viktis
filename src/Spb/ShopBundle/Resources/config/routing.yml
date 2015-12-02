@@ -1,0 +1,21 @@
+_imagine:
+    resource: .
+    type:     imagine
+
+spb_controller:
+    resource: "@SpbShopBundle/Controller"
+    type:     annotation
+
+spb_home: { pattern: /, defaults: { _controller: FrameworkBundle:Template:template, template: 'SpbShopBundle:Pages:index.html.twig' } }
+spb_ral: { pattern: /таблица-цветов-ral/, defaults: { _controller: FrameworkBundle:Template:template, template: 'SpbShopBundle:Pages:ral.html.twig' } }
+spb_pokraska: { pattern: /порошковая-окраска/, defaults: { _controller: FrameworkBundle:Template:template, template: 'SpbShopBundle:Pages:poroshkovaya-okraska.html.twig' } }
+spb_printernaya_pechat: { pattern: /принтерная-печать/, defaults: { _controller: FrameworkBundle:Template:template, template: 'SpbShopBundle:Pages:printernaya-pechat.html.twig' } }
+spb_assembling: { pattern: /советы-по-монтажу/, defaults: { _controller: FrameworkBundle:Template:template, template: 'SpbShopBundle:Pages:assembling.html.twig' } }
+spb_montazh_potolkov: { pattern: /монтаж-потолочных-систем/, defaults: { _controller: FrameworkBundle:Template:template, template: 'SpbShopBundle:Pages:montazh-potolkov.html.twig' } }
+spb_montazh_fasadov: { pattern: /монтаж-фасадных-систем/, defaults: { _controller: FrameworkBundle:Template:template, template: 'SpbShopBundle:Pages:montazh-fasadov.html.twig' } }
+spb_prices: { pattern: /прайс-лист/, defaults: { _controller: FrameworkBundle:Template:template, template: 'SpbShopBundle:Pages:prices.html.twig' } }
+spb_certificates: { pattern: /сертификаты/, defaults: { _controller: FrameworkBundle:Template:template, template: 'SpbShopBundle:Pages:certificates.html.twig' } }
+spb_contacts: { pattern: /контакты-компании-виктис/, defaults: { _controller: FrameworkBundle:Template:template, template: 'SpbShopBundle:Pages:contacts.html.twig' } }
+spb_services: { pattern: /услуги-компании-виктис/, defaults: { _controller: FrameworkBundle:Template:template, template: 'SpbShopBundle:Pages:services.html.twig' } }
+spb_delivery: { pattern: /доставка-в-компании-виктис/, defaults: { _controller: FrameworkBundle:Template:template, template: 'SpbShopBundle:Pages:delivery.html.twig' } }
+spb_icatalog: { pattern: /интерактивный-каталог/, defaults: { _controller: FrameworkBundle:Template:template, template: 'SpbShopBundle:Pages:icatalog.html.twig' } }

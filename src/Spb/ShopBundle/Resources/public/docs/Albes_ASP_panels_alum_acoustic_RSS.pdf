@@ -1,0 +1,241 @@
+<!-- [<img src="/images/Banner_obuchenie2.jpg" alt="" />
+] --><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<head>
+	<title>Страница 404</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+  <meta name="description" content="Ошибка">
+  <meta name="keywords" content="404, ошибка">
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="/css/style.css" media="all" />
+
+  <script type="text/javascript" src="/js/ajax.js"></script>    
+  <script type="text/javascript" src="/js/form_sender.js"></script>
+  <script type="text/javascript" src="/js/insert_active_flash.js"></script>
+
+  <script type="text/javascript" src="/js/jquery.js"></script>
+  <script type="text/javascript" src="/js/thickbox.js"></script>
+  <script type="text/javascript" src="/js/main.js"></script>
+  <link rel="stylesheet" href="/css/thickbox.css" type="text/css" media="screen" />
+  <link media="all" href="/css/new.css" type="text/css" rel="stylesheet">
+	<!--[if IE]>
+		<link rel="stylesheet" type="text/css" href="/css/ie.css" media="all" />
+	<![endif]-->
+
+	
+</head>
+  <body>
+  <!--LiveInternet counter-->
+<script type="text/javascript">
+new Image().src = "http://counter.yadro.ru/hit?r"+ escape(document.referrer)+((typeof(screen)=="undefined")?"":";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+";"+Math.random();
+</script>
+<!--/LiveInternet--> 
+
+
+<!-- begin of Top100 code -->
+<script id="top100Counter" type="text/javascript"
+src="http://counter.rambler.ru/top100.jcn?1553873"></script><noscript><img
+src="http://counter.rambler.ru/top100.cnt?1553873" alt="" width="1"
+height="1" border="0"></noscript>
+<!-- end of Top100 code -->
+
+<!-- Yandex.Metrika -->
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript"></script>
+<script type="text/javascript">
+try { var yaCounter683662 = new Ya.Metrika(683662); } catch(e){}
+</script>
+<noscript><img src="//mc.yandex.ru/watch/683662" style="position:absolute" alt="" /></noscript>
+<!-- /Yandex.Metrika -->
+	 <div id="container">
+		<div id="core">
+			
+<div class="login enter enter2" style="width: 190px;">
+  <div class="people"><a href="#null" onClick="$('#pop_auth_form').css('display','block');">Вход в личный кабинет</a></div> 
+  <div class="lang-box">
+        <a href="http://www.albes.ru" class="rus_on">&nbsp;</a>
+        <a href="/eng/" class="eng">&nbsp;</a>
+        <a href="/ua/" class="ukr">&nbsp;</a>
+        <a href="/by/" class="bel">&nbsp;</a>
+        <a href="http://www.albes.kz/" class="kaz">&nbsp;</a>
+   </div>
+</div>
+<div class="login" style="display: none;" id="pop_auth_form">
+  <form method="POST" action="/">
+    <div class="people"><a href="#null" onClick="$('#pop_auth_form').css('display','none');">Вход в личный кабинет</a></div>
+    <input type="hidden" name="cmd" value="login">
+    <div><input name="login" type="text" value="логин" onFocus="if(this.value=='логин') this.value='';" onBlur="if(this.value=='') this.value='логин';" /></div>
+    <div><input onkeyup="if(event.keyCode==13) $(this).parents('FORM:first').submit();" name="password" type="password" value="пароль" onFocus="if(this.value=='пароль') this.value='';" onBlur="if(this.value=='') this.value='пароль';" /><a href="#null" class="pointer" onclick="$(this).parents('FORM:first').submit();" style="margin-left: 1em;">Войти</a></div>
+    <div style="margin-top: 0.5em;"><a href="http://www.albes.ru/regform/">Заявка на регистрацию</a></div>
+  </form>  
+  <div class="lang-box">
+        <a href="http://www.albes.ru" class="rus_on" title="Русский" >&nbsp;</a>
+        <a href="/eng/" class="eng" title="Английский">&nbsp;</a>
+        <a href="/ua/" class="ukr" title="Украинский">&nbsp;</a>
+        <a href="/by/" class="bel" title="Белорусский">&nbsp;</a>
+        <a href="http://www.albes.kz/" title="Казахский" class="kaz">&nbsp;</a>
+   </div>
+</div>
+
+
+
+      <div id="cover">
+				<div id="header">
+				  <div>
+            		<div class="logo1"><a href="http://www.albes.ru"><img src="/images/pic.gif"></a></div>
+				    <div class="logo2"><img src="/images/pic.gif"></div>
+				    
+				  </div>
+				  <div class="clear"></div>
+				</div>
+				
+				<div class="l-content">
+                    <div class="content__wrapper">
+                            <div class="content__center">
+                                <div class="center_rama notop">
+                
+                                  
+                                  <div class="pathline">
+                                    <ul>
+                                      <li><a href="http://www.albes.ru">Главная</a></li>
+                                      
+                                      <li class="last">Страница 404</li>
+                                    </ul>
+                                    <div class="clear"></div>
+                                  </div>
+                                  
+                  
+                                  <h1>Страница 404</h1>
+                              <!--    <h3>[sub_title]</h3> -->
+                                  
+                                  
+                                  
+                                  <div class="size2"><p>
+	<span style="font-size: 14pt;">К сожалению, запрашиваемая вами страница не найдена.<br />
+	Возможно, вы ошиблись адресом или страница была переименована.<br />
+	Вы можете перейти на <a href="http://www.albes.ru">главную</a> страницу.</span></p>
+</div>
+                                  
+                                  
+                                  <div class="size2"> </div>
+                                  
+                                  
+                                  
+                                      <script>
+    
+      function asc_question(){
+      
+//       	wwidth = imgw<350 ? 350 : imgw ;
+//       	wheight = imgh+93;
+        wwidth = 635;
+        wheight = 500;
+        
+      	wtop = (window.screen.height-wheight)/2;
+      	wleft =(window.screen.width-wwidth)/2;
+
+        //url='/index.php?id=628'+'?spec=210';
+      	url='/598/628/?spec=210';
+        wind=window.open(url, "question", "location=no, menubar=no, scrollbars=no, toolbar=no, status = no, resizable=no, directories=no, width="+wwidth+",left="+wleft+", height="+wheight+", top="+wtop);
+        
+      	wind.focus();
+      	
+      }
+    
+    </script>
+
+    <div class="b">
+      <div class="q_marker">
+        <ul>
+          <li><a href="javascript:asc_question();">Задать вопрос специалисту</a></li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="clear"></div>
+
+                                </div>                                       
+                            </div>
+                    </div>
+                    <div class="content__left">
+                        <div class="ml">
+                            
+                            <ul>
+                              
+                              
+                                
+                                
+                                  <li><a href="http://www.albes.ru" title="Каталог продукции и услуг">Каталог продукции и услуг</a></li>
+                                
+                              
+                                
+                                
+                                  <li><a href="http://www.albes.ru/calc/" title="Калькулятор">Калькулятор</a></li>
+                                
+                              
+                                
+                                
+                                  <li><a href="http://www.albes.ru/595/" title="Реализованные проекты">Реализованные проекты</a></li>
+                                
+                              
+                                
+                                
+                                  <li><a href="http://www.albes.ru/support/" title="Техническая поддержка">Техническая поддержка</a></li>
+                                
+                              
+                                
+                                
+                                  <li><a href="http://www.albes.ru/about_company/" title="О компании">О компании</a></li>
+                                
+                              
+                                
+                                
+                                  <li><a href="http://www.albes.ru/770/" title="Скачать прайс">Скачать прайс</a></li>
+                                
+                              
+                                
+                                
+                                  <li><a href="http://www.albes.ru/montazh/" title="Советы по монтажу">Советы по монтажу</a></li>
+                                
+                              
+                              
+                            </ul>
+                            
+                          </div>
+                          <div class="ban_box">
+                          
+                            <img src="/images/Banner_obuchenie2.jpg" alt="" />
+
+                        
+                      </div>
+                    </div>
+                </div>
+                
+                
+        				
+				<div class="wrapper footer">
+					<div class="navigation">
+						<p>142700, Россия, МО, г. Видное, ул. Донбасская, д. 2  <a href="http://www.albes.ru/about_company/contacts/">Схема проезда</a></p>
+					</div>
+					<div class="content">
+						<p>Электронная почта: <a href="mailto:post@albes.ru">post@albes.ru</a> Тел./Факс: <span style="color: #fff; white-space: nowrap;">(495) 995-75-45, (495) 641-40-07</span></p>
+					</div>
+				</div>
+				<div class="company"><div style="float:left;"><!--LiveInternet logo--><a href="http://www.liveinternet.ru/click"
+target="_blank"><img src="http://counter.yadro.ru/logo?14.11"
+title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24
+часа и за сегодня" alt="" border="0" width="88"
+height="31"/></a><!--/LiveInternet-->
+
+<!-- begin of Top100 logo -->
+<a href="http://top100.rambler.ru/top100/"><img
+src="http://top100-images.rambler.ru/top100/banner-88x31-rambler-blue3.gif"
+alt="Rambler's Top100" width="88" height="31" border="0" /></a>
+<!-- end of Top100 logo --></div>© 2011 Компания “Албес”</div>
+				
+			</div>	
+		</div>		
+	</div>
+  </body>
+</html>
+

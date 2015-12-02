@@ -1,0 +1,48 @@
+{% extends 'SpbShopBundle::layout.html.twig' %}
+
+{% block title %} 
+Контакты ООО "Виктис"
+{% endblock %}
+
+{% block body %}
+
+<ul class="breadcrumb">
+    <li><a href="{{ path('spb_home') }}">Главная</a> <span class="divider">/</li>
+    <li class="active">Контакты ООО "Виктис"</li>
+</ul>
+
+<table class="table table-bordered">
+    <tr>
+        <td>
+            <address>
+                <strong>Офис:</strong><br>
+                г. Санкт-Петербург,<br> 
+                Пироговская набережная, 21А,<br>
+                БЦ "НОБЕЛЬ", офис 68<br><br>
+                Тел.:<b> (812)715-52-53</b><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b> (812)715-23-23</b><br>
+                Тел.:<b> (812)329-01-88</b>(факс)<br><br>
+                E-mail:<a href="mailto:info@viktis.ru">info@viktis.ru</a>
+            </address>
+        </td>
+        <td>            
+            <script type="text/javascript" charset="utf-8" src="//api-maps.yandex.ru/services/constructor/1.0/js/?sid=qpDtHB4NtkN6Ib2Gvn9qt1UsTGOWElKS&width=600&height=450"></script>
+        </td>
+    <tr>
+        <td>
+            <address>
+                <b>Склад</b>: <br>
+                г. Санкт- Петербург,<br>
+                Митрофаньевское шоссе, 17<br>
+                <br>Тел.: <b>(812)436-30-47</b><br><br>
+                часы работы:<br>
+                <b>&nbsp; понедельник - пятница<br>
+                    &nbsp; с 9-00 до 17-00</b>
+            </address>
+        </td>
+        <td>
+            <script type="text/javascript" charset="utf-8" src="//api-maps.yandex.ru/services/constructor/1.0/js/?sid=fSBIoOamC_E0s48R4gwKXXZ7bANZki9o&width=600&height=450"></script>
+        </td>
+    </tr>
+</table>
+{% endblock %}

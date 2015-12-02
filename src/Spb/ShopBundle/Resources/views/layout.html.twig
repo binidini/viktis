@@ -1,0 +1,226 @@
+        
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>{% block title %}Виктис - комплексное обеспечение строительных объектов{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="{% block keywords %}Виктис - комплексное обеспечение строительных объектов{% endblock %}">
+        <meta name="description" content="{% block description %}Виктис - комплексное обеспечение строительных объектов{% endblock %}">
+        <meta name="author" content="Spb Symfony - symfony.spb.ru">
+
+        <!-- Le styles -->
+        <link href="{{ asset('bundles/spbshop/css/bootstrap.css') }}" rel="stylesheet">        
+        <style type="text/css">
+                body {
+                    padding-top: 60px;
+                    padding-bottom: 40px;
+                }
+                .sidebar-nav {
+                    padding: 9px 0;
+                }
+
+                @media (max-width: 980px) {
+                    /* Enable use of floated navbar text */
+                    .navbar-text.pull-right {
+                        float: none;
+                        padding-left: 5px;
+                        padding-right: 5px;
+                    }
+                }
+            </style>
+            <link href="{{ asset('bundles/spbshop/css/bootstrap-responsive.css') }}" rel="stylesheet">
+
+            <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+            <!--[if lt IE 9]>
+              <script src="../assets/js/html5shiv.js"></script>
+            <![endif]-->
+
+            <link href="{{ asset('bundles/spbshop/css/viktis.css') }}" rel="stylesheet">
+            {% block stylesheets %}{% endblock %}
+
+            <!-- Fav and touch icons -->
+            <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ asset('apple-touch-icon-144-precomposed.png') }}">
+            <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ asset('apple-touch-icon-114-precomposed.png') }}">
+            <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ asset('apple-touch-icon-72-precomposed.png') }}">
+            <link rel="apple-touch-icon-precomposed" href="{{ asset('apple-touch-icon-57-precomposed.png') }}">
+
+            <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+        </head>
+
+        <body>
+
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="navbar-inner">
+                    <div class="container-fluid">
+                        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                        <a class="brand" href="{{path('spb_home')}}">
+                            <img src="{{ asset('bundles/spbshop/img/logo.png')}}" alt="Логотип">Виктис
+                            <span class="label label-important">Тел: (812)715-52-53, 715-23-23</span>
+                        </a>
+
+
+                        <div class="nav-collapse pull-right">
+                            <ul class="nav">
+
+                                <li class="dropdown" id="menu1">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#menu1">
+                                        Каталог
+                                        <span class="label label-info">новый</span>
+                                        <b class="caret"></b>                    
+                                    </a>  
+                                    {{ render_esi(url('spb_shop_catalog_fulltree')) }}
+                                </li>
+
+                                <li class="divider-vertical"></li>
+                                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                                <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                                <li><a href="{{ path('spb_prices') }}">Прайс-лист</a></li>
+                                <li><a href="{{ path('spb_delivery') }}">Доставка</a></li>
+                                <li class="dropdown" id="menu3">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#menu3">
+                                        Технологии
+                                        <span class="label label-success">новое</span>
+                                        <b class="caret"></b>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="{{ path('spb_certificates') }}">Сертификаты</a></li>
+                                        <li><a href="{{ path('spb_pokraska') }}">Порошковая окраска</a></li>
+                                        <li><a href="{{ path('spb_ral') }}">Таблица цветов RAL</a></li>
+                                        <li><a href="{{ path('spb_printernaya_pechat') }}">Принтерная печать</a></li>
+                                        <li><a href="{{ path('spb_assembling') }}">Советы по монтажу</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown" id="menu4">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#menu4">
+                                        О компании
+                                        <b class="caret"></b>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="{{ path('spb_services') }}">Услуги</a></li>
+                                        <li><a href="{{ path('spb_certificates') }}">Сертификаты</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="{{ path('spb_contacts') }}">Контакты</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div><!--/.nav-collapse -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span3">
+                        <div class=" sidebar-nav">
+                            <ul class="nav nav-tabs nav-stacked">
+
+                            {{ render_esi(url('spb_shop_catalog_rootnodes')) }}
+
+                                <li class="nav-header">&nbsp;</li>
+                                <li><a href="{{ path('spb_icatalog') }}">Интерактивный каталог продукции</a></li>
+                                <li class="nav-header">&nbsp;</li>
+                                <li><a href="{{ path('spb_prices') }}">ПРАЙС-лист</a></li>
+                                <li class="nav-header">Технологии</li>     
+                                <li><a href="{{ path('spb_certificates') }}">Сертификаты</a></li>                                
+                                <li><a href="{{ path('spb_pokraska') }}">Порошковая окраска</a></li>
+                                <li><a href="{{ path('spb_ral') }}">Таблица цветов RAL</a></li>
+                                <li><a href="{{ path('spb_printernaya_pechat') }}">Принтерная печать</a></li>
+                                <li><a href="{{ path('spb_assembling') }}">Советы по монтажу</a></li>
+                                <li class="nav-header">О компании</li>
+                                <li><a href="{{ path('spb_services') }}">Услуги</a></li>                                
+                                <li><a href="{{ path('spb_contacts') }}">Контакты</a></li>
+                            </ul>
+                        </div>
+
+                    </div><!--/span-->
+                    <div class="span9">                                                                                  
+                            {% block body %} {% endblock %}          
+                        </div><!--/span-->
+                    </div><!--/row-->
+
+                    <hr>
+
+                    <footer>
+                        <div class="row-fluid">
+                            <div class="span6">
+                                <address>
+                                    <strong>Виктис</strong><br>
+                                    Санкт-Петербург<br>
+                                    Пироговская набережная, 21А,<br>
+                                    БЦ "НОБЕЛЬ", офис 68, <br>
+                                    <abbr title="Телефон">Т:</abbr> (812)715-52-53<br/>
+                                    <abbr title="Телефон">Т:</abbr>  (812)715-23-23
+                                </address>
+                            </div>
+
+                            <div class="span3">
+                                © 2005 <a href="http://www.viktis.ru" title="Виктис - обеспечение строительных объектов">Виктис</a>
+                                <br/>
+                                <!-- Yandex.Metrika informer -->
+                                <a href="http://metrika.yandex.ru/stat/?id=21250114&amp;from=informer"
+                                   target="_blank" rel="nofollow"><img src="//bs.yandex.ru/informer/21250114/3_0_FFFFFFFF_EFEFEFFF_0_pageviews"
+                                                                    style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика" title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)" onclick="try{Ya.Metrika.informer({i:this,id:21250114,lang:'ru'});return false}catch(e){}"/></a>
+                                <!-- /Yandex.Metrika informer -->
+
+                                <!-- Yandex.Metrika counter -->
+                                <script type="text/javascript">
+                                (function (d, w, c) {
+                                    (w[c] = w[c] || []).push(function() {
+                                        try {
+                                            w.yaCounter21250114 = new Ya.Metrika({id:21250114,
+                                                    clickmap:true,
+                                                    trackLinks:true,
+                                                    accurateTrackBounce:true});
+                                        } catch(e) { }
+                                    });
+
+                                    var n = d.getElementsByTagName("script")[0],
+                                        s = d.createElement("script"),
+                                        f = function () { n.parentNode.insertBefore(s, n); };
+                                    s.type = "text/javascript";
+                                    s.async = true;
+                                    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+                                    if (w.opera == "[object Opera]") {
+                                        d.addEventListener("DOMContentLoaded", f, false);
+                                    } else { f(); }
+                                })(document, window, "yandex_metrika_callbacks");
+                                    </script>
+                                    <noscript><div><img src="//mc.yandex.ru/watch/21250114" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+                                    <!-- /Yandex.Metrika counter -->
+                                    <br/><br/>
+                                    <a href="http://symfony.spb.ru" title="Интернет компания SymfonySpb" title="Symfony Spb">сделано в СССР</a>
+                                </div>
+                                <div class="span3">
+                                    <img src="{{ asset('bundles/spbshop/img/vk32.png') }}" alt="Вконтакте"/>
+                                    <br/>
+                                    <a href="http://vk.com/potolki.viktis" title="Виктис Вконтакте">
+                                        Подвесные потолки Вконтакте
+                                    </a>                                   
+                                    <br/>
+                                    <a href="http://vk.com/viktis.vitrulan" title="Виктис Стеклообои Витрулан">
+                                        Стеклообои Витрулан Вконтакте
+                                    </a>                                          
+                                </div>                                
+                            </div>
+                        </footer>
+
+                    </div><!--/.fluid-container-->
+
+                    <!-- Le javascript
+                    ================================================== -->
+                    <!-- Placed at the end of the document so the pages load faster -->
+                    <script src="{{ asset('bundles/spbshop/js/jquery-1.9.1.min.js') }}"></script>        
+                    <script src="{{ asset('bundles/spbshop/js/bootstrap.min.js') }}"></script>
+
+                {% block javascripts %}{% endblock %}
+
+
+                </body>
+            </html>

@@ -1,0 +1,31 @@
+{% extends 'SpbShopBundle::layout.html.twig' %}
+
+{% block title %} 
+Советы по монтажу
+{% endblock %}
+
+{% block body %}
+
+<ul class="breadcrumb">
+    <li><a href="{{ path('spb_home') }}">Главная</a> <span class="divider">/</li>
+    <li><a href="{{ path('spb_assembling') }}">Советы по монтажу</a> <span class="divider">/</li>
+    <li class="active">Монтаж фасадных систем</li>
+</ul>
+
+<p>
+    <a href="http://get.adobe.com/reader/" target="_blank">
+        <img alt="Adobe Reader" src="{{ asset('bundles/spbshop/img/712_get_adobe_reader.gif') }}" style="margin-right: 5px;" align="left" border="0">
+    </a>
+    Все каталоги и буклеты представлены в формате Adobe PDF. Для просмотра документации необходимо приложение Adobe Reader, которое можно <a href="http://get.adobe.com/reader/" target="_blank" title="Загрузить приложение Adobe Reader">бесплатно загрузить</a> и установить с официального сайта разработчика.
+</p>
+<table class="table">
+    <tbody>
+        <tr>
+            <td><a href="{{ asset('bundles/spbshop/docs/instrukciya_po_montazhu_afs_1000_2000.pdf') }}">Монтаж фасадных систем AFS 1000/2000</a></td>
+        </tr>
+        <tr>
+            <td><a href="{{ asset('bundles/spbshop/docs/montazh_ak580s_2012.pdf') }}">Монтаж фасадных систем АК-580С</a></td>
+        </tr>
+    </tbody>
+</table>
+{% endblock %}

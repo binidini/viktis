@@ -1,0 +1,65 @@
+{% extends 'SpbShopBundle::layout.html.twig' %}
+
+{% block title %} 
+Компания "Виктис" - доставка
+{% endblock %}
+
+{% block body %}
+
+<ul class="breadcrumb">
+    <li><a href="{{ path('spb_home') }}">Главная</a> <span class="divider">/</li>
+    <li class="active">Доставка</li>
+</ul>
+
+<div id="myCarousel" class="carousel slide thumbnail">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li class="" data-target="#myCarousel" data-slide-to="1"></li>
+        <li class="" data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="{{ asset('bundles/spbshop/img/deliverys01.jpg')  }}" alt="">
+            <div class="carousel-caption">
+                <h4>«Автотрейдинг»</h4>
+                <p>
+                    входит в число крупнейших транспортно-экспедиционных компаний в России, которая почти 20 лет работает на рынке грузоперевозок.
+                    <a href="http://www.ae5000.ru/" >Подробнее...</a>
+                </p>                
+            </div>
+        </div>
+        <div class="item">
+            <img src="{{ asset('bundles/spbshop/img/deliverys02.jpg')  }}" alt="">
+            <div class="carousel-caption">
+                <h4>ПЭК</h4>
+                <p>
+                     Любым видом транспорта – любой груз наших Клиентов будет доставлен в оптимальные сроки и в максимальной сохранности. 
+                    <a href="http://www.pecom.ru" >Подробнее...</a>
+                </p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="{{ asset('bundles/spbshop/img/deliverys03.jpg')  }}" alt="">
+            <div class="carousel-caption">
+                <h4>Выберите сами транспортную компанию</h4>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+</div>
+
+<p>
+    Доставка товара осуществляется по Санкт-Петербургу и области, а также в города России,
+    посредством транспортных компаний:
+<ul>
+    <li><a href="http://www.pecom.ru">ПЭК</a>,</li>
+    <li><a href="http://www.ae5000.ru/">Автотрейдинг</a></li>
+    <li>и других - на усмотрение заказчика.</li> 
+</ul>
+</p>
+<p>
+    С условиями и тарифами доставки можно познакомиться на сайтах транспортных компаний.
+</p>
+
+{% endblock %}

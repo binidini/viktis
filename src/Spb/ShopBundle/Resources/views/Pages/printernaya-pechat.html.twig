@@ -1,0 +1,113 @@
+{% extends 'SpbShopBundle::layout.html.twig' %}
+
+{% block title %} 
+Принтерная печать
+{% endblock %}
+
+{% block body %}
+
+<ul class="breadcrumb">
+    <li><a href="{{ path('spb_home') }}">Главная</a> <span class="divider">/</li>
+    <li class="active">Порошковая окраска</li>
+</ul>
+
+<div class="row-fluid">
+    <ul class="thumbnails">
+        <li class="span3 thumbnail">
+            <img src="{{ asset('bundles/spbshop/img/939_a00001.jpg') | apply_filter('thumb400x260') }}" >
+        </li>
+        <li class="span3 thumbnail">
+            <img src="{{ asset('bundles/spbshop/img/940_a00002.jpg') | apply_filter('thumb400x260') }}" >
+        </li>
+        <li class="span3 thumbnail">
+            <img src="{{ asset('bundles/spbshop/img/941_a00003.jpg') | apply_filter('thumb400x260') }}" >
+        </li>
+        <li class="span3 thumbnail">
+            <img src="{{ asset('bundles/spbshop/img/942_a00004.jpg') | apply_filter('thumb400x260') }}" >
+        </li>
+    </ul>
+</div>
+<div class="row-fluid">
+    <ul class="thumbnails">
+        <li class="span3 thumbnail">
+            <img src="{{ asset('bundles/spbshop/img/943_a00005.jpg') | apply_filter('thumb400x260') }}" >
+        </li>
+        <li class="span3 thumbnail">
+            <img src="{{ asset('bundles/spbshop/img/944_a00006.jpg') | apply_filter('thumb400x260') }}" >
+        </li>
+        <li class="span3 thumbnail">
+            <img src="{{ asset('bundles/spbshop/img/945_a00007.jpg') | apply_filter('thumb400x260') }}" >
+        </li>
+        <li class="span3 thumbnail">
+            <img src="{{ asset('bundles/spbshop/img/946_a00008.jpg') | apply_filter('thumb400x260') }}" >
+        </li>
+    </ul>
+</div>                                  
+
+<p>
+    Дизайн интерьера должен воплощать оригинальное архитектурное решение,
+    которое призвано подчеркнуть класс данного помещения. Многообразие задач 
+    по обустройству потолочного пространства различных помещений с нанесением 
+    художественных изображений может быть решено РПО «Албес». Такого широкого 
+    ассортимента потолочных систем нет ни у одного российского производителя.
+    Прекрасным решением для интерьеров высокого класса выступают потолочные 
+    системы «Албес», где в качестве облицовочного элемента используются
+    металлические панели с эксклюзивные цветовыми и графическими решениями.
+</p>
+<p>
+    <iframe class="thumbnail" allowfullscreen="" src="http://www.youtube.com/embed/CcGhTeFdQAg?rel=0" align="middle" frameborder="0" height="315" width="560"></iframe></p>
+
+<h4>Технология</h4>
+<p>
+    Пьезоэлектрическая технология печати с использованием светидиодного источника отверждения чернил. Технология отверждения основана на полимеризации чернил под воздействием прямого ультрафиолетового излучения (технология UV-LED).
+</p>
+<h5>Прочность и долговечность</h5>
+<p>
+    Изображение устойчиво к выцветанию как минимум до 3 лет(зависит от условий эксплуатации).
+    Единтсвенное ограничение - следует избегать грубых механических воздействий и мыть без
+    применения абразивных чистящих средств.
+</p>
+<h4>Экологичность</h4>
+<p>
+    Технология UV-LED считается экологически безопасной.
+    При использовании принтера не выделяется озон и другие вредные испарения, 
+    что абсолютно безопасно для здоровья и окружающей среды.
+</p>
+<h5>Область применения</h5>
+<p>
+    Любые плоские поверхности: оформление интерьеров (потолочные и стеновые пространства), поверхностей различных изделий (мебель, стекло, зеркала и т.п.); оформление рекламно-информационных стендов, баннеров; наружное оформление зданий и т.п.
+</p>
+<p>
+    <img class="thumbnail" src="{{ asset('bundles/spbshop/img/printernaya_pechat_priroda.jpg') }}">
+</p>
+<h4>Преимущества металлических подвесных потолков</h4>
+<ul>
+    <li>
+        <strong>Прочность и долговечность</strong><br>
+        Подвесные металлические потолки редко нуждаются в замене, т.к. отличаются стойкостью к повреждениям при демонтаже и при проведении влажной уборки.
+    </li>
+    <li>
+        <strong>Оригинальность</strong><br>
+        Большой выбор моделей, цветов и изображений подвесных потолков позволяет реализовывать различные дизайнерские проекты.
+    </li>
+    <li>
+        <strong>Звукопоглощение</strong>
+    </li>
+    <li>
+        <strong>Пожаробезопасность</strong><br>
+        Металлические потолки производятся из негорючих материалов, что обеспечивает дополнительную защиту здания в случае пожара.
+    </li>
+    <li>
+        <strong>Освещение<br>
+        </strong></li>
+    <li>
+        <strong>Влагостойкость</strong>
+    </li>
+</ul>
+<p>
+    <a href="{{ asset('bundles/spbshop/docs/sert_sootvetstviya_na_pechat.pdf') }}">
+        Сертификат <img alt="" src="{{ asset('bundles/spbshop/img/logo_pdf.jpg') }}">
+    </a>
+</p>
+
+{% endblock %}                

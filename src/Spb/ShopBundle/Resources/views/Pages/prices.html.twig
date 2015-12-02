@@ -1,0 +1,102 @@
+{% extends 'SpbShopBundle::layout.html.twig' %}
+
+{% block title %} 
+Компания "Виктис" - цены, прайс, прайс-лист
+{% endblock %}
+
+{% block body %}
+
+<ul class="breadcrumb">
+    <li><a href="{{ path('spb_home') }}">Главная</a> <span class="divider">/</li>
+    <li class="active">Прайс-лист</li>
+</ul>
+
+<div class="accordion" id="accordion2">
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                Грильято цена
+            </a>
+        </div>
+        <div id="collapseOne" class="accordion-body collapse">
+            <div class="accordion-inner">
+                Здесь Вы можете <a href="{{ asset('bundles/spbshop/docs/prices/grigliato_05.08.13.xlsx') }}">загрузить Excel <i class="icon-download"></i> файл</a>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                Светильники RVA Грильято, армстронг
+            </a>
+        </div>
+        <div id="collapseTwo" class="accordion-body collapse">
+            <div class="accordion-inner">
+                Здесь Вы можете <a href="{{ asset('bundles/spbshop/docs/prices/svetilniki_05.08.13.xlsx') }}">загрузить Excel <i class="icon-download"></i> файл</a>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+                Реечный потолок АЛБЕС
+            </a>
+        </div>
+        <div id="collapseThree" class="accordion-body collapse">
+            <div class="accordion-inner">
+                Здесь Вы можете <a href="{{ asset('bundles/spbshop/docs/prices/reechnij_090412.xls') }}">загрузить Excel <i class="icon-download"></i> файл</a>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
+                Кассетный потолок 600х600 АЛБЕС
+            </a>
+        </div>
+        <div id="collapseFour" class="accordion-body collapse">
+            <div class="accordion-inner">
+                Здесь Вы можете <a href="{{ asset('bundles/spbshop/docs/prices/kassetnyi_23.08.13.xls') }}">загрузить Excel <i class="icon-download"></i> файл</a>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFive">
+                Кассетный потолок 300х300 CESAL
+            </a>
+        </div>
+        <div id="collapseFive" class="accordion-body collapse">
+            <div class="accordion-inner">
+                Здесь Вы можете <a href="{{ asset('bundles/spbshop/docs/prices/kassetnij_300x300_090412.xls') }}">загрузить Excel <i class="icon-download"></i> файл</a>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseSix">
+                Потолочная плита (подвесной потолок)
+            </a>
+        </div>
+        <div id="collapseSix" class="accordion-body collapse">
+            <div class="accordion-inner">
+                Здесь Вы можете <a href="{{ asset('bundles/spbshop/docs/prices/plita_100412.xls') }}">загрузить Excel <i class="icon-download"></i> файл</a>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-group">
+        <div class="accordion-heading">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseSeven">
+                Стеклообои Витрулан
+            </a>
+        </div>
+        <div id="collapseSeven" class="accordion-body collapse">
+            <div class="accordion-inner">
+                Здесь Вы можете <a href="{{ asset('bundles/spbshop/docs/prices/rosnitsa_new.xls') }}">загрузить Excel <i class="icon-download"></i> файл</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+

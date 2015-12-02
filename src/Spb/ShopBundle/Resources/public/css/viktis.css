@@ -1,0 +1,22 @@
+/* 
+    Document   : viktis
+    Created on : 12.03.2013, 18:35:24
+    Author     : Denis Olinam
+    Description:
+        Дополнения к twitter bootstrap.
+*/
+
+/* Chevrons */
+.sidebar-nav .icon-chevron-right {
+  float: right;
+  margin-top: 2px;
+  margin-right: -6px;
+  opacity: .25;
+}
+
+/* set a max-width for horizontal fluid layout and make it centered */
+.container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1600px; /* or 1200px */
+}
