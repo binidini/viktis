@@ -1,0 +1,25 @@
+{% extends 'SpbShopBundle::layout.html.twig' %}
+
+{% block title %} 
+Услуги компании "Виктис"
+{% endblock %}
+
+{% block body %}
+
+<ul class="breadcrumb">
+    <li><a href="{{ path('spb_home') }}">Главная</a> <span class="divider">/</li>
+    <li class="active">Светильники Центрстройсвет"</li>
+</ul>
+
+    <table border="0" class="table0">
+        <tbody>
+        <tr>
+            <td rowspan="2"><a href="{{ asset('bundles/spbshop/docs/csvt_2015-2016.pdf') }}"><img alt="CSVT_2015_cover1" height="300" src="{{ asset('bundles/spbshop/img/csvt.jpg') }}" ></a></td>
+            <td><a href="{{ asset('bundles/spbshop/docs/csvt_2015-2016.pdf') }}"><img alt="акробат" src="{{ asset('bundles/spbshop/img/acrobat.png') }}" style="border-width: 0;" title=""></a></td>
+            <td>&nbsp;<a href="{{ asset('bundles/spbshop/docs/csvt_2015-2016.pdf') }}">Каталог 2015-2016 7 .94 Мб</a>.</td>
+        </tr>
+        </tbody>
+    </table>
+
+
+{% endblock %}
