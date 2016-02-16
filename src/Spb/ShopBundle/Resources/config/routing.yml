@@ -19,3 +19,4 @@ spb_contacts: { pattern: /контакты-компании-виктис/, defau
 spb_services: { pattern: /услуги-компании-виктис/, defaults: { _controller: FrameworkBundle:Template:template, template: 'SpbShopBundle:Pages:services.html.twig' } }
 spb_delivery: { pattern: /доставка-в-компании-виктис/, defaults: { _controller: FrameworkBundle:Template:template, template: 'SpbShopBundle:Pages:delivery.html.twig' } }
 spb_icatalog: { pattern: /интерактивный-каталог/, defaults: { _controller: FrameworkBundle:Template:template, template: 'SpbShopBundle:Pages:icatalog.html.twig' } }
+spb_csvt: { pattern: /светильники-центрстройсвет/, defaults: { _controller: FrameworkBundle:Template:template, template: 'SpbShopBundle:Pages:csvt.html.twig' } }
