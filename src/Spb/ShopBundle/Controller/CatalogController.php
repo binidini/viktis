@@ -14,13 +14,13 @@ class CatalogController extends Controller {
      * @Route("/catalog/rootnodes", name="spb_shop_catalog_rootnodes")
      */
     public function rootNodesAction() {
-        
+
         $em = $this->getDoctrine()->getManager();
 
         $repo = $em->getRepository('SpbShopBundle:Category');
-        
+
         $controller = $this;
-        
+
         $options = array(
             'decorate' => true,
             'rootOpen' => '',
@@ -31,13 +31,13 @@ class CatalogController extends Controller {
                 return '<a href="' . $controller->generateUrl('spb_shop_catalog_category', array('slug'=>$node['slug'], 'tag'=>$node['tag'])) . '"><i class="icon-chevron-right"></i>' . $node['title'] . '</a>';
             }
         );
-        
+
         $htmlTree = $repo->childrenHierarchy(
                 null, /* starting from root nodes */
                 true, /* load only direct */
                 $options
         );
-        
+
         $response = new Response($htmlTree);
         // пометить ответ как public или private
         $response->setPublic();
@@ -49,21 +49,21 @@ class CatalogController extends Controller {
 
         // установить специальную директиву Cache-Control
         $response->headers->addCacheControlDirective('must-revalidate', true);
-               
-        return $response;                
+
+        return $response;
     }
 
     /**
      * @Route("/catalog/fulltree", name="spb_shop_catalog_fulltree")
      */
     public function fullTreeAction() {
-        
+
         $em = $this->getDoctrine()->getManager();
 
         $repo = $em->getRepository('SpbShopBundle:Category');
-        
+
         $controller = $this;
-        
+
         $options = array(
             'decorate' => true,
             'rootOpen' => '<ul class="dropdown-menu">',
@@ -80,15 +80,15 @@ class CatalogController extends Controller {
                 return '<a href="' . $controller->generateUrl('spb_shop_catalog_category', array('slug'=>$node['slug'], 'tag'=>$node['tag'])) . '">' . $node['title'] . '</a>';
             }
         );
-        
+
         $htmlTree = $repo->childrenHierarchy(
                 null, /* starting from root nodes */
                 false, /* load all children, not only direct */
                 $options
         );
-        
+
         $response = new Response($htmlTree);
-        
+
         // пометить ответ как public или private
         $response->setPublic();
         //$response->setPrivate();
@@ -99,15 +99,15 @@ class CatalogController extends Controller {
 
         // установить специальную директиву Cache-Control
         $response->headers->addCacheControlDirective('must-revalidate', true);
-               
-        return $response;        
+
+        return $response;
     }
 
     /**
      * @Route("/catalog/{slug}/{tag}/", name="spb_shop_catalog_category")
      */
     public function categoryAction($slug) {
-        
+
         $em = $this->getDoctrine()->getManager();
 
         $repo = $em->getRepository('SpbShopBundle:Category');
@@ -116,24 +116,24 @@ class CatalogController extends Controller {
         $parents = $repo->getPath($entity);
 
         if ( $repo->childCount($entity) > 0 ) {
-            
+
             $children = $repo->children($entity, true/*direct*/);
 
             return $this->render(
                 'SpbShopBundle:Catalog:category.html.twig',
                 array('entity' => $entity, 'parents'=>$parents,'items' => $children)
-            );            
+            );
         } else {
-            
+
             $finder = new Finder();
             $finder->files()->in($this->container->getParameter('catalog_img') . $entity->getTag());
             $finder->sortByName();
-            
+
             return $this->render(
                 'SpbShopBundle:Catalog:product.html.twig',
                 array('entity' => $entity, 'parents'=>$parents, 'finder'=>$finder)
             );
-        }        
-        
-    }    
+        }
+
+    }
 }

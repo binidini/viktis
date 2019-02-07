@@ -24,7 +24,7 @@ class Transliterator extends \Gedmo\Sluggable\Util\Urlizer {
         'ч' => 'ch', 'џ' => 'dh', 'ш' => 'sh', 'щ' => 'shh', 'ь' => '',
         'ы' => 'yi', 'ъ' => '', 'э' => 'e', 'ю' => 'yu', 'я' => 'ya'
     );
-    
+
     public static function transliterate($text, $separator = '-') {
         $text = strtr($text, self::$table);
         if (preg_match('/[\x80-\xff]/', $text) && self::validUtf8($text)) {
@@ -32,7 +32,7 @@ class Transliterator extends \Gedmo\Sluggable\Util\Urlizer {
         }
         return self::urlize($text, $separator);
     }
-    
-    
-    
+
+
+
 }

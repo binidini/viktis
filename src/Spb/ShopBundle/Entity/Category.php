@@ -41,18 +41,18 @@ class Category
      * @ORM\Column(name="c01_description", type="string", length=255)
      */
     private $description;
-    
+
     /**
      * @var string
      * @ORM\Column(name="c01_tag", type="string", length=128)
      */
     private $tag;
-    
+
     /**
      * @ORM\OneToMany(targetEntity="Product", mappedBy="category")
      */
     private $products;
-    
+
 
     /**
      * @Gedmo\TreeLeft
@@ -89,23 +89,23 @@ class Category
      * @ORM\OneToMany(targetEntity="Category", mappedBy="parent")
      * @ORM\OrderBy({"lft" = "ASC"})
      */
-    private $children;    
-    
+    private $children;
+
     /**
      * @Gedmo\Slug(fields={"title"})
      * @ORM\Column(name="c01_slug", type="string", length=128, unique=true)
      */
-    private $slug;    
-    
+    private $slug;
+
     public function __construct()
     {
         $this->products = new ArrayCollection();
     }
-    
+
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -121,14 +121,14 @@ class Category
     public function setDescription($description)
     {
         $this->description = $description;
-    
+
         return $this;
     }
 
     /**
      * Get description
      *
-     * @return string 
+     * @return string
      */
     public function getDescription()
     {
@@ -144,7 +144,7 @@ class Category
     public function addProduct(\Spb\ShopBundle\Entity\Product $products)
     {
         $this->products[] = $products;
-    
+
         return $this;
     }
 
@@ -161,7 +161,7 @@ class Category
     /**
      * Get products
      *
-     * @return \Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection
      */
     public function getProducts()
     {
@@ -177,14 +177,14 @@ class Category
     public function setTitle($title)
     {
         $this->title = $title;
-    
+
         return $this;
     }
 
     /**
      * Get title
      *
-     * @return string 
+     * @return string
      */
     public function getTitle()
     {
@@ -200,14 +200,14 @@ class Category
     public function setLft($lft)
     {
         $this->lft = $lft;
-    
+
         return $this;
     }
 
     /**
      * Get lft
      *
-     * @return integer 
+     * @return integer
      */
     public function getLft()
     {
@@ -223,14 +223,14 @@ class Category
     public function setLvl($lvl)
     {
         $this->lvl = $lvl;
-    
+
         return $this;
     }
 
     /**
      * Get lvl
      *
-     * @return integer 
+     * @return integer
      */
     public function getLvl()
     {
@@ -246,14 +246,14 @@ class Category
     public function setRgt($rgt)
     {
         $this->rgt = $rgt;
-    
+
         return $this;
     }
 
     /**
      * Get rgt
      *
-     * @return integer 
+     * @return integer
      */
     public function getRgt()
     {
@@ -269,14 +269,14 @@ class Category
     public function setRoot($root)
     {
         $this->root = $root;
-    
+
         return $this;
     }
 
     /**
      * Get root
      *
-     * @return integer 
+     * @return integer
      */
     public function getRoot()
     {
@@ -292,14 +292,14 @@ class Category
     public function setParent(\Spb\ShopBundle\Entity\Category $parent = null)
     {
         $this->parent = $parent;
-    
+
         return $this;
     }
 
     /**
      * Get parent
      *
-     * @return \Spb\ShopBundle\Entity\Category 
+     * @return \Spb\ShopBundle\Entity\Category
      */
     public function getParent()
     {
@@ -315,7 +315,7 @@ class Category
     public function addChildren(\Spb\ShopBundle\Entity\Category $children)
     {
         $this->children[] = $children;
-    
+
         return $this;
     }
 
@@ -332,7 +332,7 @@ class Category
     /**
      * Get children
      *
-     * @return \Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection
      */
     public function getChildren()
     {
@@ -348,14 +348,14 @@ class Category
     public function setSlug($slug)
     {
         $this->slug = $slug;
-    
+
         return $this;
     }
 
     /**
      * Get slug
      *
-     * @return string 
+     * @return string
      */
     public function getSlug()
     {
@@ -371,14 +371,14 @@ class Category
     public function setKeywords($keywords)
     {
         $this->keywords = $keywords;
-    
+
         return $this;
     }
 
     /**
      * Get keywords
      *
-     * @return string 
+     * @return string
      */
     public function getKeywords()
     {
@@ -394,14 +394,14 @@ class Category
     public function setTag($tag)
     {
         $this->tag = $tag;
-    
+
         return $this;
     }
 
     /**
      * Get tag
      *
-     * @return string 
+     * @return string
      */
     public function getTag()
     {
